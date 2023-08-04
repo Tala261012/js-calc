@@ -5,6 +5,8 @@ class Calc {
 
   static #isDot = false
 
+  static #memo = ''
+
   static add = (newValue) => {
     if (isNaN(this.#value[this.#value.length - 2])) {
       if (
@@ -77,8 +79,40 @@ class Calc {
     this.#output()
     console.log('calc is init')
   }
+
+  static del = () => {
+    this.#value = this.#value.slice(
+      0,
+      this.#value.length - 1,
+    )
+    this.#output()
+  }
+
+  static memoAdd = () => {
+    this.result()
+    this.#memo = String(
+      Number(this.#memo) + Number(this.#value),
+    )
+  }
+
+  static memoSub = () => {
+    this.result()
+    this.#memo = String(
+      Number(this.#memo) - Number(this.#value),
+    )
+    console.log(this.#memo)
+  }
+
+  static memoRead = () => {
+    this.#value = this.#memo
+    this.#output()
+  }
+
+  static memoReset = () => {
+    this.#memo = ''
+  }
 }
 
 window.calc = Calc
 
-Calc.init()
+// Calc.init()
