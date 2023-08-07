@@ -3,4 +3,8 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	padding: 100px;
+
+	background-image: linear-gradient(180deg, rgb(22, 32, 53) 0%, rgba(42,47,76,1) 100%);
+	background-size: cover;
+	background-attachment: fixed;
 }

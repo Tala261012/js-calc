@@ -58,20 +58,11 @@ class Calc {
 
   static result = () => {
     if (isNaN(this.#value[this.#value.length - 1])) {
-      console.log(this.#value)
       return null
     }
 
     this.#value = String(eval(this.#value))
-
-    if (this.#value.includes('.')) {
-      this.#isDot = true
-    } else {
-      this.#isDot = false
-    }
-
     this.#output()
-    console.log(this.#value)
   }
 
   static #save = () => {
@@ -97,21 +88,11 @@ class Calc {
     this.#output()
   }
 
-  static outputMemo = () => {
-    if (this.#memo !== '') {
-      window.memo.style.visibility = 'visible'
-      window.memo.innerHTML = this.#memo
-    } else {
-      window.memo.style.visibility = 'hidden'
-    }
-  }
-
   static memoAdd = () => {
     this.result()
     this.#memo = String(
       Number(this.#memo) + Number(this.#value),
     )
-    this.outputMemo()
   }
 
   static memoSub = () => {
@@ -119,7 +100,7 @@ class Calc {
     this.#memo = String(
       Number(this.#memo) - Number(this.#value),
     )
-    this.outputMemo()
+    console.log(this.#memo)
   }
 
   static memoRead = () => {
@@ -129,7 +110,6 @@ class Calc {
 
   static memoReset = () => {
     this.#memo = ''
-    this.outputMemo()
   }
 }
 
