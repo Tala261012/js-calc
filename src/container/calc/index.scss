@@ -10,11 +10,12 @@ main {
 	justify-content: center;
 	align-items: center;
 	padding: 24px;
+	gap: 12px;
 } 
 
 .memo__field {
 	width: 320px;
-	padding: 24px;
+	padding: 12px;
 	text-align: left;
 	color:  #ffc2df77;
 	visibility: hidden;
@@ -38,6 +39,7 @@ main {
 
 .display {
 	height: 60px;
+	min-height: 40px;
 	width: 100%;
 	padding: 10px;
 	background-color: $secondary-color;

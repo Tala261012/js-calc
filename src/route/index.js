@@ -8,8 +8,8 @@ const test = require('./test')
 const calc = require('./calc')
 const calcold = require('./calcold')
 // Об'єднайте файли роутів за потреби
-router.use('/', test)
-router.use('/calc', calc)
+router.use('/', calc)
+// router.use('/calc', calc)
 router.use('/calcold', calcold)
 // Використовуйте інші файли роутів, якщо є
 
