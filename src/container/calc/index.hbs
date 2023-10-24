@@ -4,40 +4,45 @@
 }}
 
 <main>
+	<div class="memo__field" id="memo"></div>
 	<div class="calculator">
 		<div class="display" id="output">
 		</div>
-		<div class="buttons buttons--big">
-			<button onclick="calc.add(9)">9</button>
-			<button onclick="calc.add(8)">8</button>
-			<button onclick="calc.add(7)">7</button>
-			<button onclick="calc.add(6)">6</button>
-			<button onclick="calc.add(5)">5</button>
-			<button onclick="calc.add(4)">4</button>
-			<button onclick="calc.add(3)">3</button>
-			<button onclick="calc.add(2)">2</button>
-			<button onclick="calc.add(1)">1</button>
-			<button onclick="calc.add(0)">0</button>
-			<button onclick="calc.dot()">.</button>
-			<button onclick="calc.del()">c</button>
-		</div>
-		<div class="buttons buttons--small">
-			<button onclick="calc.op('+')">+</button>
-			<button onclick="calc.op('-')">-</button>
-			<button onclick="calc.op('*')">*</button>
-			<button onclick="calc.op('/')">/</button>
-		</div>
-		<div class="buttons buttons--small">
-			<button onclick="calc.result()">=</button>
-			<button onclick="calc.reset()">C</button>
-		</div>
-		<div class="buttons buttons--small">
-			<button onclick="calc.memoAdd()">M+</button>
-			<button onclick="calc.memoSub()">M-</button>
-			<button onclick="calc.memoRead()">MR</button>
-			<button onclick="calc.memoReset()">MC</button>
+		<div class="buttons buttons--quadro">
+			<button onclick="calc.memoAdd()" class="button memo">M+</button>
+			<button onclick="calc.memoSub()" class="button  memo">M-</button>
+			<button onclick="calc.memoRead()" class="button  memo">MR</button>
+			<button onclick="calc.memoReset()" class="button  memo">MC</button>
+
+			<button onclick="calc.op('+')" class="button op">+</button>
+			<button onclick="calc.op('-')" class="button op">-</button>
+			<button onclick="calc.op('*')" class="button op">*</button>
+			<button onclick="calc.op('/')" class="button op">/</button>
+
+			<button onclick="calc.add(7)" class="button">7</button>
+			<button onclick="calc.add(8)" class="button">8</button>
+			<button onclick="calc.add(9)" class="button">9</button>
+			<button onclick="calc.result()" class="button equal">=</button>
+
+			<button onclick="calc.add(4)" class="button">4</button>
+			<button onclick="calc.add(5)" class="button">5</button>
+			<button onclick="calc.add(6)" class="button">6</button>
+			<button onclick="calc.add(1)" class="button">1</button>
+			<button onclick="calc.add(2)" class="button">2</button>
+			<button onclick="calc.add(3)" class="button">3</button>
+
+			<button onclick="calc.add(0)" class="button">0</button>
+			<button onclick="calc.dot()" class="button">.</button>
+			<button onclick="calc.del()" class="button clear">c</button>
+			<button onclick="calc.reset()" class="button clear">C</button>
 		</div>
 	</div>
+	{{!-- <div>
+		<p>M: Read Memory</p>
+		<p>Shift + M: Memory++</p>
+		<p>Ctrl + M: Memory--</p>
+		<p>Alt + M: Clean Memory</p>
+	</div> --}}
 </main>
 
 {{!
